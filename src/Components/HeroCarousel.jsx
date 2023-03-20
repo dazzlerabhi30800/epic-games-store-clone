@@ -25,7 +25,6 @@ const HeroCarousel = () => {
 
         currentImg.dataset.status = "before";
         nextImg.dataset.status = "before-active";
-        // clearInterval(Interval);
 
         setTimeout(() => {
           carouselItem[index].style.setProperty("--item-width", 0 + "%");
