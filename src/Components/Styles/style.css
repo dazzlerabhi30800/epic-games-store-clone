@@ -1,5 +1,5 @@
 :root {
-  --height: 710px;
+  --height: 670px;
 }
 
 body {
@@ -21,8 +21,7 @@ body {
   width: 100%;
   justify-content: center;
   align-items: center;
-  height: 80vh;
-  /* background: blue; */
+  height: 85vh;
 }
 .carousel--container > button {
   background: #fff;
