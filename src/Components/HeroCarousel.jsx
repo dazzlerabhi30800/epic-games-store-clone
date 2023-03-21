@@ -11,32 +11,35 @@ const HeroCarousel = () => {
 
   useEffect(() => {
     // width = 0;
-    const carouselImg = document.querySelectorAll(".img");
-    const carouselItem = document.querySelectorAll(".item");
-    let Interval = setInterval(() => {
-      width += 1;
-      carouselItem[index].style.setProperty("--item-width", width + "%");
-      carouselItem[index].classList.add("active");
-      if (width === 100) {
-        width = 0;
-        newIndex = index + 1 >= carouselImg.length ? 0 : index + 1;
-        const currentImg = document.querySelector(`[data-index="${index}"]`);
-        const nextImg = document.querySelector(`[data-index="${newIndex}"]`);
-
-        currentImg.dataset.status = "before";
-        nextImg.dataset.status = "before-active";
-
-        setTimeout(() => {
-          carouselItem[index].style.setProperty("--item-width", 0 + "%");
-          carouselItem[index].classList.remove("active");
-          nextImg.dataset.status = "active";
-          index = newIndex;
+    const timer = setTimeout(() => {
+      const carouselImg = document.querySelectorAll(".img");
+      const carouselItem = document.querySelectorAll(".item");
+      let Interval = setInterval(() => {
+        width += 1;
+        carouselItem[index].style.setProperty("--item-width", width + "%");
+        carouselItem[index].classList.add("active");
+        if (width === 100) {
           width = 0;
-          // setWidth(0);
-        }, 50);
-      }
-    }, 40);
-    return () => clearInterval(Interval);
+          newIndex = index + 1 >= carouselImg.length ? 0 : index + 1;
+          const currentImg = document.querySelector(`[data-index="${index}"]`);
+          const nextImg = document.querySelector(`[data-index="${newIndex}"]`);
+
+          currentImg.dataset.status = "before";
+          nextImg.dataset.status = "before-active";
+
+          setTimeout(() => {
+            carouselItem[index].style.setProperty("--item-width", 0 + "%");
+            carouselItem[index].classList.remove("active");
+            nextImg.dataset.status = "active";
+            index = newIndex;
+            width = 0;
+            // setWidth(0);
+          }, 50);
+        }
+      }, 50);
+      return () => clearInterval(Interval);
+    }, 3000);
+    return () => clearTimeout(timer);
   }, []);
 
   return (

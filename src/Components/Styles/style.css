@@ -106,27 +106,27 @@ body {
   transform: none;
 }
 .img:nth-child(1) {
-  background-image: url("/public/imgs/carousel-images/pc-images/gta-v-pc.jpg");
+  background-image: url("/imgs/carousel-images/pc-images/gta-v-pc.jpg");
 }
 
 .img:nth-child(2) {
-  background-image: url("/public/imgs/carousel-images/pc-images/unbound-pc.jpg");
+  background-image: url("/imgs/carousel-images/pc-images/unbound-pc.jpg");
 }
 
 .img:nth-child(3) {
-  background-image: url("/public/imgs/carousel-images/pc-images/fortnite-pc.jpg");
+  background-image: url("/imgs/carousel-images/pc-images/fortnite-pc.jpg");
 }
 
 .img:nth-child(4) {
-  background-image: url("/public/imgs/carousel-images/pc-images/sifu-pc.jpg");
+  background-image: url("/imgs/carousel-images/pc-images/sifu-pc.jpg");
 }
 
 .img:nth-child(5) {
-  background-image: url("/public/imgs/carousel-images/pc-images/diablo-3.jpg");
+  background-image: url("/imgs/carousel-images/pc-images/diablo-3.jpg");
 }
 
 .img:nth-child(6) {
-  background-image: url("/public/imgs/carousel-images/pc-images/cod-black-ops-3.jpg");
+  background-image: url("/imgs/carousel-images/pc-images/cod-black-ops-3.jpg");
 }
 
 .item--list {
