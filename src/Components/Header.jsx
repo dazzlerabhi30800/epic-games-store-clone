@@ -18,7 +18,7 @@ const Header = () => {
       <nav
         className={
           windowSize.size < 1100
-            ? `flex flex-col w-1/2 h-full bg-gray-800 ${
+            ? `flex flex-col w-3/4 h-full z-40 bg-gray-800 ${
                 showMenu ? "translate-x-0" : "translate-x-full"
               } top-0 right-0 justify-between absolute ease-in duration-300`
             : "flex flex-row justify-between static w-full h-full gap-8"
@@ -111,10 +111,14 @@ const Header = () => {
       </nav>
       {windowSize.size < 1100 && (
         <button
-          className="flex z-20 mr-2"
+          className="flex z-50 mr-2 md:select-none"
           onClick={() => setShowMenu((prevState) => !prevState)}
         >
-          {showMenu ? <Unicons.UilTimes /> : <Unicons.UilBars />}
+          {showMenu ? (
+            <Unicons.UilTimes className="select-none" />
+          ) : (
+            <Unicons.UilBars className="select-none" />
+          )}
         </button>
       )}
     </header>

@@ -40,13 +40,17 @@ const HeroCarousel = () => {
             }, 50);
           }
         }, 45);
+        window.addEventListener("resize", () => clearInterval(Interval));
+        window.removeEventListener("resize", () => clearInterval(Interval));
         return () => clearInterval(Interval);
       }, 3000);
+      window.addEventListener("resize", () => clearTimeout(timer));
+      window.removeEventListener("resize", () => clearTimeout(timer));
       return () => clearTimeout(timer);
     } else {
       return;
     }
-  }, []);
+  }, [size.size]);
 
   return (
     <div className="carousel--container">
