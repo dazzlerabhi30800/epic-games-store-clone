@@ -4,15 +4,17 @@ import Header from "./Components/Header";
 import HeroCarousel from "./Components/HeroCarousel";
 import MobileCarousel from "./Components/MobileCarousel";
 import SwiperTest from "./Components/SwiperTest";
+import useResize from "./useResize";
 
 function App() {
+  const windowSize = useResize();
+  console.log(windowSize);
   return (
     <div className="App">
       <Header />
       <main>
-        {/* <HeroCarousel /> */}
+        {windowSize.size >= 1100 ? <HeroCarousel /> : <SwiperTest />}
         {/* <MobileCarousel /> */}
-        <SwiperTest />
       </main>
     </div>
   );

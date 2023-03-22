@@ -1,52 +1,58 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import "./Styles/style.css";
+import useResize from "../useResize";
 
 const HeroCarousel = () => {
-  const carouselImg = useRef();
-  const carouselItem = useRef();
-
+  let size = useResize();
   let index = 0;
   let newIndex = 0;
   let width = 0;
 
   useEffect(() => {
     // width = 0;
-    const timer = setTimeout(() => {
-      const carouselImg = document.querySelectorAll(".img");
-      const carouselItem = document.querySelectorAll(".item");
-      let Interval = setInterval(() => {
-        width += 1;
-        carouselItem[index].style.setProperty("--item-width", width + "%");
-        carouselItem[index].classList.add("active");
-        if (width === 100) {
-          width = 0;
-          newIndex = index + 1 >= carouselImg.length ? 0 : index + 1;
-          const currentImg = document.querySelector(`[data-index="${index}"]`);
-          const nextImg = document.querySelector(`[data-index="${newIndex}"]`);
-
-          currentImg.dataset.status = "before";
-          nextImg.dataset.status = "before-active";
-
-          setTimeout(() => {
-            carouselItem[index].style.setProperty("--item-width", 0 + "%");
-            carouselItem[index].classList.remove("active");
-            nextImg.dataset.status = "active";
-            index = newIndex;
+    if (size.size >= 1100) {
+      const timer = setTimeout(() => {
+        const carouselImg = document.querySelectorAll(".img");
+        const carouselItem = document.querySelectorAll(".item");
+        let Interval = setInterval(() => {
+          width += 1;
+          carouselItem[index].style.setProperty("--item-width", width + "%");
+          carouselItem[index].classList.add("active");
+          if (width === 100) {
             width = 0;
-            // setWidth(0);
-          }, 50);
-        }
-      }, 50);
-      return () => clearInterval(Interval);
-    }, 3000);
-    return () => clearTimeout(timer);
+            newIndex = index + 1 >= carouselImg.length ? 0 : index + 1;
+            const currentImg = document.querySelector(
+              `[data-index="${index}"]`
+            );
+            const nextImg = document.querySelector(
+              `[data-index="${newIndex}"]`
+            );
+
+            currentImg.dataset.status = "before";
+            nextImg.dataset.status = "before-active";
+
+            setTimeout(() => {
+              carouselItem[index].style.setProperty("--item-width", 0 + "%");
+              carouselItem[index].classList.remove("active");
+              nextImg.dataset.status = "active";
+              index = newIndex;
+              width = 0;
+            }, 50);
+          }
+        }, 45);
+        return () => clearInterval(Interval);
+      }, 3000);
+      return () => clearTimeout(timer);
+    } else {
+      return;
+    }
   }, []);
 
   return (
     <div className="carousel--container">
       <div className="carousel--wrapper">
         <div className="carousel--img">
-          <div className="carousel--img_item" ref={carouselImg}>
+          <div className="carousel--img_item">
             <div className="img" data-index="0" data-status="active"></div>
             <div className="img" data-index="1" data-status="unknown"></div>
             <div className="img" data-index="2" data-status="unknown"></div>
@@ -55,7 +61,7 @@ const HeroCarousel = () => {
             <div className="img" data-index="5" data-status="unknown"></div>
           </div>
         </div>
-        <div className="item--list" ref={carouselItem}>
+        <div className="item--list">
           <div className="item">
             <img
               src="/imgs/carousel-images/item-images/gtav-item.jpg"

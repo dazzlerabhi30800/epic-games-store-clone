@@ -1,0 +1,124 @@
+:root {
+    --swiper-pagination-color: #58d9fa;
+    --swiper-pagination-bullet-inactive-color: #8c8d8a;
+    --swiper-pagination-bullet-inactive-opacity: 0.6;
+    --swiper-pagination-progressbar-size: 10px;
+    --swiper-pagination-bullet-size: 20px;
+    --swiper-pagination-bullet-width: 10px;
+    --swiper-pagination-bullet-height: 10px;
+    --swiper-pagination-top: 450px;
+}
+
+
+
+.swiper--container {
+    height: 65vh;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    /* background: blue; */
+}
+
+.swiper-slide {
+    text-align: center;
+    /* background: #fff; */
+
+    /* Center slide text vertically */
+    display: flex;
+    color: #fff;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.slide {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    font-size: 1.5rem;
+    justify-content: center;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+.slide>div {
+    padding: 1rem;
+    width: 100%;
+    background: #0000009a;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    /* border-radius: 5px; */
+}
+
+.slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* width: 100%;
+    height: 100px; */
+    background: radial-gradient(circle, transparent 40%, black 100%);
+}
+
+.slide::before {
+    position: absolute;
+    content: '';
+    top: 75%;
+    height: 100px;
+    left: -1px;
+    width: px;
+    width: 1px;
+    background: linear-gradient(transparent, #f31767, transparent);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.slide.active::before {
+    opacity: 1;
+    top: 40%;
+}
+
+.slide.one {
+    background-image: url('/imgs/carousel-images/pc-images/fortnite-pc.jpg');
+}
+
+.slide.two {
+    background-image: url('/imgs/carousel-images/pc-images/sifu-pc.jpg');
+}
+
+.slide.three {
+    background-image: url('/imgs/carousel-images/pc-images/diablo-3.jpg');
+}
+
+.slide.four {
+    background-image: url('/imgs/carousel-images/pc-images/unbound-pc.jpg');
+}
+
+.slide.five {
+    background-image: url('/imgs/carousel-images/pc-images/gta-v-pc.jpg');
+}
+
+.slide.six {
+    background-image: url('/imgs/carousel-images/pc-images/witcher.jpg');
+}

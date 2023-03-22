@@ -1,13 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import * as Unicons from "@iconscout/react-unicons";
 import Logo from "./Logo";
+import useResize from "../useResize";
 
 const Header = () => {
+  let windowSize = useResize();
+  const [showMenu, setShowMenu] = useState(false);
   return (
-    <header className="flex justify-between text-white bg-gray-700 text-base">
-      <nav className="flex gap-8 items-center basis-1/2 px-4">
+    <header
+      className={`flex ${
+        windowSize.size < 1100 ? "justify-between" : "justify-start"
+      } items-center w-full gap-2 text-white bg-gray-700 text-base`}
+    >
+      <div className="logo p-3 h-full">
         <Logo />
-        <ul className="flex items-center  tracking-wider whitespace-nowrap font-poppins gap-0 justify-between">
+      </div>
+      <nav
+        className={
+          windowSize.size < 1100
+            ? `flex flex-col w-1/2 h-full bg-gray-800 ${
+                showMenu ? "translate-x-0" : "translate-x-full"
+              } top-0 right-0 justify-between absolute ease-in duration-300`
+            : "flex flex-row justify-between static w-full h-full gap-8"
+        }
+      >
+        <ul
+          className={
+            windowSize.size < 1100
+              ? "flex flex-col "
+              : "flex flex-row items-center  tracking-wider whitespace-nowrap font-poppins gap-0 justify-between"
+          }
+        >
           <li className="relative after:absolute cursor-pointer p-4 h-full  after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-sky-500">
             <a
               className="ease-in duration-200 hover:opacity-80 uppercase"
@@ -32,7 +55,13 @@ const Header = () => {
               support
             </a>
           </li>
-          <div className="h-10 mx-2 bg-white w-0.5 opacity-80"></div>
+          <div
+            className={
+              windowSize.size < 1100
+                ? "hidden"
+                : "block h-10 mx-2 bg-white w-0.5 opacity-80"
+            }
+          ></div>
           <li className="relative after:absolute p-4 h-full cursor-pointer after:bottom-0  after:left-0 after:w-full after:opacity-0 after:ease-in after:duration-200 hover:after:opacity-100 after:h-1 after:bg-sky-500">
             <a
               className="ease-in duration-200 hover:opacity-80 uppercase"
@@ -42,22 +71,52 @@ const Header = () => {
             </a>
           </li>
         </ul>
-      </nav>
-      <div className="flex basis-1/2  items-center gap-6 justify-end pl-3">
-        <a
-          href="#"
-          className="no-underline ease-in duration-200 hover:opacity-80"
+        <div
+          className={
+            windowSize.size < 1100
+              ? "grid grid-cols-2 place-items-start place-content-stretch w-full"
+              : "flex flex-row min-h-full w-1/2 items-center gap-6 justify-end pl-3"
+          }
         >
-          <Unicons.UilGlobe />
-        </a>
-        <button className="flex gap-3 ease-in duration-200 hover:opacity-80">
-          <Unicons.UilUser />
-          <span>Sign In</span>
+          <a
+            href="#"
+            className={
+              windowSize.size < 1100
+                ? "bg-gray-500 py-4 w-full flex justify-center"
+                : "no-underline ease-in duration-200 hover:opacity-80"
+            }
+          >
+            <Unicons.UilGlobe />
+          </a>
+          <button
+            className={
+              windowSize.size < 1100
+                ? "flex bg-violet-700 w-full py-4 gap-3 justify-center"
+                : "flex gap-3 ease-in duration-200 hover:opacity-80"
+            }
+          >
+            <Unicons.UilUser />
+            <span>Sign In</span>
+          </button>
+          <button
+            className={
+              windowSize.size < 1100
+                ? "py-4 bg-sky-400 w-full col-span-2"
+                : "ease-in duration-200 hover:bg-sky-400 bg-sky-500 text-base h-full px-6 uppercase"
+            }
+          >
+            Download
+          </button>
+        </div>
+      </nav>
+      {windowSize.size < 1100 && (
+        <button
+          className="flex z-20 mr-2"
+          onClick={() => setShowMenu((prevState) => !prevState)}
+        >
+          {showMenu ? <Unicons.UilTimes /> : <Unicons.UilBars />}
         </button>
-        <button className="ease-in duration-200 hover:bg-sky-400 bg-sky-500 text-base h-full px-6 uppercase">
-          Download
-        </button>
-      </div>
+      )}
     </header>
   );
 };
