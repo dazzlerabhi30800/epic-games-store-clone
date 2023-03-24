@@ -6,13 +6,15 @@
     --swiper-pagination-bullet-size: 20px;
     --swiper-pagination-bullet-width: 10px;
     --swiper-pagination-bullet-height: 10px;
-    --swiper-pagination-top: 450px;
+    --swiper-pagination-top: 95%;
 }
 
 
 
+
+
 .swiper--container {
-    height: 65vh;
+    height: 75vh;
 }
 
 .swiper {
@@ -121,4 +123,15 @@
 
 .slide.six {
     background-image: url('/imgs/carousel-images/pc-images/witcher.jpg');
+}
+
+@media Screen and (min-width: 900px) {
+    main {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .sale--slide>img {
+        height: 350px;
+    }
 }

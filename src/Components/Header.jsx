@@ -10,7 +10,7 @@ const Header = () => {
     <header
       className={`flex ${
         windowSize.size < 1100 ? "justify-between" : "justify-start"
-      } items-center w-full gap-2 text-white bg-gray-700 text-base`}
+      } items-start w-full gap-2 text-white bg-gray-700 text-base`}
     >
       <div className="logo p-3 h-full">
         <Logo />
@@ -111,7 +111,9 @@ const Header = () => {
       </nav>
       {windowSize.size < 1100 && (
         <button
-          className="flex z-50 mr-2 md:select-none"
+          className={`flex z-50 ${
+            !showMenu ? "bg-sky-400" : ""
+          } ease-in duration-300 min-h-full p-4 md:select-none`}
           onClick={() => setShowMenu((prevState) => !prevState)}
         >
           {showMenu ? (

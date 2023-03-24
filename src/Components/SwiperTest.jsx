@@ -21,7 +21,7 @@ const SwiperTest = () => {
     handleActive();
   }, [activeIndex]);
   return (
-    <div className="pb-10 my-10 overflow-hidden swiper--container">
+    <div className="overflow-hidden swiper--container">
       <Swiper
         slidesPerView={1.5}
         spaceBetween={30}
@@ -34,7 +34,7 @@ const SwiperTest = () => {
         centeredSlides={true}
         // navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper py-12"
       >
         <SwiperSlide>
           <div className="slide one">

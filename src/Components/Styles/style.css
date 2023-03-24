@@ -18,7 +18,6 @@ body {
   position: relative;
   min-height: 100vh;
   overflow-x: hidden;
-  width: 100vw;
   background: rgb(38, 40, 43);
   background: linear-gradient(90deg,
       rgba(38, 40, 43, 1) 0%,
@@ -26,6 +25,7 @@ body {
       rgba(30, 31, 31, 1) 100%,
       rgba(17, 23, 29, 1) 100%);
 }
+
 
 .carousel--container {
   display: flex;
@@ -265,4 +265,15 @@ body {
 
 .carousel--item.fourth {
   background-image: url("/public/imgs/carousel-images/pc-images/sifu-pc.jpg");
+}
+
+
+@media Screen and (max-width: 1400px) {
+  :root {
+    --height: 600px;
+  }
+
+  .item--list {
+    gap: 1.1rem;
+  }
 }
