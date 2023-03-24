@@ -141,16 +141,12 @@
     border-radius: 50%;
     border: 3px solid #d0d0d0;
     color: #d0d0d0;
-    top: 0px;
+    top: 8px;
     right: 10px;
-    opacity: 0;
+    opacity: 1;
     transition: top .3s ease;
 }
 
-.item--img:hover::after {
-    top: 8px;
-    opacity: 1;
-}
 
 @media Screen and (min-width: 900px) {
     main {
@@ -160,5 +156,20 @@
 
     .item--img>img {
         height: 350px;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+
+    .item--img::after {
+        top: 0px;
+        right: 10px;
+        opacity: 0;
+    }
+
+    .item--img:hover::after {
+        top: 8px;
+        opacity: 1;
     }
 }
