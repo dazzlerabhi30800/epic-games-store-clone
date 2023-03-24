@@ -125,13 +125,40 @@
     background-image: url('/imgs/carousel-images/pc-images/witcher.jpg');
 }
 
+.item--img {
+    position: relative;
+}
+
+.item--img::after {
+    position: absolute;
+    content: "+";
+    background: #000;
+    width: max-content;
+    text-align: center;
+    height: max-content;
+    padding: 0px 8px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    border: 3px solid #d0d0d0;
+    color: #d0d0d0;
+    top: 0px;
+    right: 10px;
+    opacity: 0;
+    transition: top .3s ease;
+}
+
+.item--img:hover::after {
+    top: 8px;
+    opacity: 1;
+}
+
 @media Screen and (min-width: 900px) {
     main {
         width: 80%;
         margin: 0 auto;
     }
 
-    .sale--slide>img {
+    .item--img>img {
         height: 350px;
     }
 }

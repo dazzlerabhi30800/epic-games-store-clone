@@ -14,7 +14,9 @@ const SaleItem = ({ data }) => {
   };
   return (
     <div className="sale--slide flex flex-col gap-2 text-left h-max">
-      <img className="rounded-md" src={data.image} alt={data.name} />
+      <div className="item--img">
+        <img className="rounded-md" src={data.image} alt={data.name} />
+      </div>
       <span className="uppercase text-gray-300">base game</span>
       <h2 className="name my-0 text-lg uppercase">{data.name}</h2>
       <div className="price--container flex justify-start gap-3 px-2 items-center">
