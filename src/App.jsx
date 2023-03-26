@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import ComingSoonGames from "./Components/ComingSoonGames";
 import FreeGames from "./Components/FreeGames";
 import Header from "./Components/Header";
 import HeroCarousel from "./Components/HeroCarousel";
@@ -17,6 +18,7 @@ function App() {
         {windowSize.size >= 1100 ? <HeroCarousel /> : <SwiperTest />}
         <Sale windowSize={windowSize} />
         <FreeGames />
+        <ComingSoonGames />
       </main>
     </div>
   );

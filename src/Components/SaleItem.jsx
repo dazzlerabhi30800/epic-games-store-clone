@@ -16,7 +16,11 @@ const SaleItem = ({ data }) => {
   return (
     <div className="sale--slide flex flex-col gap-2 text-left h-max">
       <div className="item--img">
-        <img className="rounded-md" src={data.image} alt={data.name} />
+        <img
+          className="rounded-md object-cover"
+          src={data.image}
+          alt={data.name}
+        />
         <div className="pin--btn">
           <Unicons.UilPlus className="plus--sign" />
         </div>
