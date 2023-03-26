@@ -8,49 +8,49 @@ const HeroCarousel = () => {
   let newIndex = 0;
   let width = 0;
 
-  // useEffect(() => {
-  //   // width = 0;
-  //   if (size.size >= 1100) {
-  //     const timer = setTimeout(() => {
-  //       const carouselImg = document.querySelectorAll(".img");
-  //       const carouselItem = document.querySelectorAll(".item");
-  //       let Interval = setInterval(() => {
-  //         width += 1;
-  //         carouselItem[index].style.setProperty("--item-width", width + "%");
-  //         carouselItem[index].classList.add("active");
-  //         if (width === 100) {
-  //           width = 0;
-  //           newIndex = index + 1 >= carouselImg.length ? 0 : index + 1;
-  //           const currentImg = document.querySelector(
-  //             `[data-index="${index}"]`
-  //           );
-  //           const nextImg = document.querySelector(
-  //             `[data-index="${newIndex}"]`
-  //           );
+  useEffect(() => {
+    // width = 0;
+    if (size.size >= 1100) {
+      const timer = setTimeout(() => {
+        const carouselImg = document.querySelectorAll(".img");
+        const carouselItem = document.querySelectorAll(".item");
+        let Interval = setInterval(() => {
+          width += 1;
+          carouselItem[index].style.setProperty("--item-width", width + "%");
+          carouselItem[index].classList.add("active");
+          if (width === 100) {
+            width = 0;
+            newIndex = index + 1 >= carouselImg.length ? 0 : index + 1;
+            const currentImg = document.querySelector(
+              `[data-index="${index}"]`
+            );
+            const nextImg = document.querySelector(
+              `[data-index="${newIndex}"]`
+            );
 
-  //           currentImg.dataset.status = "before";
-  //           nextImg.dataset.status = "before-active";
+            currentImg.dataset.status = "before";
+            nextImg.dataset.status = "before-active";
 
-  //           setTimeout(() => {
-  //             carouselItem[index].style.setProperty("--item-width", 0 + "%");
-  //             carouselItem[index].classList.remove("active");
-  //             nextImg.dataset.status = "active";
-  //             index = newIndex;
-  //             width = 0;
-  //           }, 50);
-  //         }
-  //       }, 45);
-  //       window.addEventListener("resize", () => clearInterval(Interval));
-  //       window.removeEventListener("resize", () => clearInterval(Interval));
-  //       return () => clearInterval(Interval);
-  //     }, 3000);
-  //     window.addEventListener("resize", () => clearTimeout(timer));
-  //     window.removeEventListener("resize", () => clearTimeout(timer));
-  //     return () => clearTimeout(timer);
-  //   } else {
-  //     return;
-  //   }
-  // }, [size.size]);
+            setTimeout(() => {
+              carouselItem[index].style.setProperty("--item-width", 0 + "%");
+              carouselItem[index].classList.remove("active");
+              nextImg.dataset.status = "active";
+              index = newIndex;
+              width = 0;
+            }, 50);
+          }
+        }, 45);
+        window.addEventListener("resize", () => clearInterval(Interval));
+        window.removeEventListener("resize", () => clearInterval(Interval));
+        return () => clearInterval(Interval);
+      }, 3000);
+      window.addEventListener("resize", () => clearTimeout(timer));
+      window.removeEventListener("resize", () => clearTimeout(timer));
+      return () => clearTimeout(timer);
+    } else {
+      return;
+    }
+  }, [size.size]);
 
   return (
     <div className="carousel--container">

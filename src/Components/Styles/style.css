@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+main {
+  padding-bottom: 1rem;
+}
+
 
 html {
   width: 100%;
@@ -17,13 +21,12 @@ html {
 body {
   position: relative;
   min-height: 100vh;
+  height: max-content;
+  width: 100%;
   overflow-x: hidden;
-  background: rgb(38, 40, 43);
-  background: linear-gradient(90deg,
-      rgba(38, 40, 43, 1) 0%,
-      rgba(37, 41, 45, 1) 51%,
-      rgba(30, 31, 31, 1) 100%,
-      rgba(17, 23, 29, 1) 100%);
+  background: rgb(6, 6, 6);
+  background: linear-gradient(90deg, rgba(6, 6, 6, 1) 0%, rgba(33, 33, 33, 1) 47%, rgba(0, 0, 0, 1) 100%);
+  background-repeat: no-repeat;
 }
 
 

@@ -10,7 +10,7 @@ const Header = () => {
     <header
       className={`flex ${
         windowSize.size < 1100 ? "justify-between" : "justify-start"
-      } items-start w-full gap-2 text-white bg-gray-700 text-base`}
+      } items-start w-full gap-2 text-white bg-zinc-800 text-base`}
     >
       <div className="logo p-3 h-full">
         <Logo />
