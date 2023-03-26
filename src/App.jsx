@@ -8,12 +8,11 @@ import useResize from "./useResize";
 
 function App() {
   const windowSize = useResize();
-  let mobileTrue = windowSize.size < 1000 ? true : false;
 
   return (
     <div className="App">
       <Header />
-      <main>
+      <main className="font-poppins">
         {windowSize.size >= 1100 ? <HeroCarousel /> : <SwiperTest />}
         <Sale windowSize={windowSize} />
       </main>

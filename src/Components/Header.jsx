@@ -19,7 +19,9 @@ const Header = () => {
         className={
           windowSize.size < 1100
             ? `flex flex-col w-3/4 h-full z-40 bg-gray-800 ${
-                showMenu ? "translate-x-0" : "translate-x-full"
+                showMenu
+                  ? "translate-x-0 opacity-1"
+                  : "translate-x-full opacity-0"
               } top-0 right-0 justify-between absolute ease-in duration-300`
             : "flex flex-row justify-between static w-full h-full gap-8"
         }

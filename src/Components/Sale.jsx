@@ -10,6 +10,7 @@ import SaleItem from "./SaleItem";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import SaleNewArrival from "./SaleNewArrival";
 
 const Sale = ({ windowSize }) => {
   const swiperRef = useRef();
@@ -17,7 +18,7 @@ const Sale = ({ windowSize }) => {
   const [beginning, setBeginning] = useState(true);
 
   return (
-    <div className="sale--wrapper flex flex-col my-10 gap-8 p-3 font-poppins">
+    <div className="sale--wrapper flex flex-col my-10 gap-20 p-3 font-poppins">
       <div className="navigation--header flex justify-between items-center">
         <a href="#" className="decoration-none text-lg text-white">
           <h1>Games on Sale </h1>
@@ -74,6 +75,7 @@ const Sale = ({ windowSize }) => {
           </SwiperSlide> */}
         </Swiper>
       </div>
+      <SaleNewArrival windowSize={windowSize} />
     </div>
   );
 };

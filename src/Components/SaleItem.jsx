@@ -1,4 +1,5 @@
 import React from "react";
+import * as Unicons from "@iconscout/react-unicons";
 
 const SaleItem = ({ data }) => {
   const numberWithCommas = (x) => {
@@ -16,6 +17,9 @@ const SaleItem = ({ data }) => {
     <div className="sale--slide flex flex-col gap-2 text-left h-max">
       <div className="item--img">
         <img className="rounded-md" src={data.image} alt={data.name} />
+        <div className="pin--btn">
+          <Unicons.UilPlus className="plus--sign" />
+        </div>
       </div>
       <span className="uppercase text-gray-300">base game</span>
       <h2 className="name my-0 text-lg uppercase">{data.name}</h2>
