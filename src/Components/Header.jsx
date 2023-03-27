@@ -18,7 +18,7 @@ const Header = () => {
       <nav
         className={
           windowSize.size < 1100
-            ? `flex flex-col w-3/4 h-full z-40 bg-gray-800 ${
+            ? `flex flex-col w-3/4 h-full z-40 bg-zinc-800 ${
                 showMenu
                   ? "translate-x-0 opacity-1"
                   : "translate-x-full opacity-0"

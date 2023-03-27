@@ -1,18 +1,7 @@
 import React from "react";
 import * as Unicons from "@iconscout/react-unicons";
 
-const SaleItem = ({ data }) => {
-  const numberWithCommas = (x) => {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  };
-  const handleDiscount = (price, discount) => {
-    if (price && discount) {
-      let discountPrice = (price * discount) / 100;
-      return price - discountPrice;
-    } else {
-      return;
-    }
-  };
+const SaleItem = ({ data, handleDiscount, numberWithCommas }) => {
   return (
     <div className="sale--slide flex flex-col gap-2 text-left h-max">
       <div className="item--img">

@@ -4,7 +4,7 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import * as Unicons from "@iconscout/react-unicons";
 import SaleItem from "./SaleItem";
-// import "swiper/swiper-bundle.css";
+import "swiper/swiper-bundle.css";
 
 // Import Swiper styles
 import "swiper/css";
@@ -12,7 +12,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import SaleNewArrival from "./SaleNewArrival";
 
-const Sale = ({ windowSize }) => {
+const Sale = ({ windowSize, numberWithCommas, handleDiscount }) => {
   const swiperRef = useRef();
   const [end, setEnd] = useState(false);
   const [beginning, setBeginning] = useState(true);
@@ -66,7 +66,11 @@ const Sale = ({ windowSize }) => {
           {data.map((data, index) => {
             return (
               <SwiperSlide key={index}>
-                <SaleItem data={data} />
+                <SaleItem
+                  handleDiscount={handleDiscount}
+                  numberWithCommas={numberWithCommas}
+                  data={data}
+                />
               </SwiperSlide>
             );
           })}

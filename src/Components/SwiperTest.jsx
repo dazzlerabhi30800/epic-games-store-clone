@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-// import "swiper/swiper-bundle.css";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+// import "swiper/swiper-bundle.css";
 
 const SwiperTest = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -34,10 +34,10 @@ const SwiperTest = () => {
         centeredSlides={true}
         // navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper py-12"
+        className="mySwiper  py-12"
       >
         <SwiperSlide>
-          <div className="slide one">
+          <div className="slide one ">
             <div>fortnite</div>
           </div>
         </SwiperSlide>
