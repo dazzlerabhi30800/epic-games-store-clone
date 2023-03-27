@@ -1,0 +1,92 @@
+export default [
+  {
+    image: "./imgs/sale-imgs/gta-v.jpg",
+    name: "Grand Theft Auto V: Premium Edition",
+    discount: null,
+    price: 2399,
+  },
+  {
+    image: "./imgs/sale-imgs/valorant.jpg",
+    name: "Valorant",
+    discount: null,
+    price: null,
+  },
+  {
+    image: "./imgs/sale-imgs/naraka.jpg",
+    name: "NARAKA: BLADEPOINT",
+    discount: null,
+    price: 1199,
+  },
+  {
+    image: "./imgs/sale-imgs/rdr-2.jpg",
+    name: "Red Dead Redemption 2",
+    discount: null,
+    price: 3199,
+  },
+  {
+    image: "./imgs/sale-imgs/fifa-23.jpg",
+    name: "EA SPORTS™ FIFA 23 Standard Edition",
+    discount: null,
+    price: 3499,
+  },
+  {
+    image: "./imgs/sale-imgs/among-us.jpg",
+    name: "Among Us",
+    discount: null,
+    price: 119,
+  },
+  {
+    image: "./imgs/sale-imgs/bloons-td6.jpg",
+    name: "Bloons TD 6",
+    discount: null,
+    price: 699,
+  },
+  {
+    image: "./imgs/sale-imgs/league-of-legends.jpg",
+    name: "League of Legends",
+    discount: null,
+    price: null,
+  },
+  {
+    image: "./imgs/sale-imgs/hogwarts.jpg",
+    name: "Hogwarts Legacy",
+    discount: null,
+    price: 2999,
+  },
+  {
+    image: "./imgs/sale-imgs/magic-arena.jpg",
+    name: "Magic: The Gathering Arena",
+    discount: null,
+    price: null,
+  },
+  {
+    image: "./imgs/sale-imgs/cities-skyline.jpg",
+    name: "Cities Skylines",
+    discount: null,
+    price: 1300,
+  },
+  {
+    image: "./imgs/sale-imgs/star-wars.jpg",
+    name: "STAR WARS™ Battlefront™ II: Celebration Edition",
+    discount: null,
+    price: 2499,
+  },
+  {
+    image: "./imgs/sale-imgs/ark.jpg",
+    name: "ARK: Survival Evolved",
+    discount: null,
+    price: 469,
+  },
+  {
+    image: "./imgs/sale-imgs/tomb-raider.jpg",
+    name: "Shadow of the Tomb Raider: Definitive Edition",
+    discount: null,
+    price: 2195,
+  },
+  {
+    image: "./imgs/sale-imgs/cyberpunk.jpg",
+    name: "Cyberpunk 2077",
+    discount: null,
+    price: 2999,
+  },
+];

@@ -1,0 +1,18 @@
+
+  {
+    "gta v",
+    "valorant",
+    "naraka bladepoint",
+    "rdr 2",
+    "ea sports fifa 23 standard edition",
+    "among us",
+    "bloons td 6",
+    "league of legends",
+    "hogwarts legacy",
+    "magic: the gathering arena",
+    "cities skylines",
+    "star wars battlefront 3",
+    "ark survival evolved",
+    "shadow of the tomb raider: definitive edition",
+    "cyberpunk 2077",
+  }

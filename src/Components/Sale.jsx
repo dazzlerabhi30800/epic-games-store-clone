@@ -1,6 +1,5 @@
-import React, { useState, useRef, useEffect } from "react";
-import data from "./SalesData";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import React, { useState, useRef } from "react";
+import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import * as Unicons from "@iconscout/react-unicons";
 import SaleItem from "./SaleItem";
@@ -12,7 +11,13 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import SaleNewArrival from "./SaleNewArrival";
 
-const Sale = ({ windowSize, numberWithCommas, handleDiscount }) => {
+const Sale = ({
+  uppercase,
+  data,
+  windowSize,
+  numberWithCommas,
+  handleDiscount,
+}) => {
   const swiperRef = useRef();
   const [end, setEnd] = useState(false);
   const [beginning, setBeginning] = useState(true);
@@ -70,6 +75,7 @@ const Sale = ({ windowSize, numberWithCommas, handleDiscount }) => {
                   handleDiscount={handleDiscount}
                   numberWithCommas={numberWithCommas}
                   data={data}
+                  uppercase={uppercase}
                 />
               </SwiperSlide>
             );
@@ -79,7 +85,7 @@ const Sale = ({ windowSize, numberWithCommas, handleDiscount }) => {
           </SwiperSlide> */}
         </Swiper>
       </div>
-      <SaleNewArrival windowSize={windowSize} />
+      {uppercase && <SaleNewArrival windowSize={windowSize} />}
     </div>
   );
 };

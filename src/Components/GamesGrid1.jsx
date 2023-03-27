@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import data from "./GamesGrid1Data";
 // import * as Unicons from "@iconscout/react-unicons";
@@ -12,15 +11,11 @@ import "swiper/swiper-bundle.css";
 import GamesGridItem from "./GamesGridItem";
 
 const GamesGrid1 = ({ windowSize, handleDiscount, numberWithCommas }) => {
-  const [gameTop, SetGameTop] = useState(
-    data.filter((data) => data.category === "top")
-  );
-  const [gameMost, SetGameMost] = useState(
-    data.filter((data) => data.category === "most")
-  );
-  const [gameWishlist, SetGameWishlist] = useState(
-    data.filter((data) => data.category === "wishlist")
-  );
+  const gameTop = data.filter((data) => data.category === "top");
+
+  const gameMost = data.filter((data) => data.category === "most");
+
+  const gameWishlist = data.filter((data) => data.category === "wishlist");
   return (
     <div className="games-grid--wrapper my-10">
       <Swiper

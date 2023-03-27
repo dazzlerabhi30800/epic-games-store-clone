@@ -56,7 +56,7 @@
   text-transform: uppercase;
 }
 
-.slide>div {
+.slide > div {
   padding: 1rem;
   width: 100%;
   background: #0000009a;
@@ -83,8 +83,7 @@
   width: px;
   width: 1px;
   background: linear-gradient(transparent, #74f60b, transparent);
-  box-shadow: 1px 1px 10px 3px #00000077,
-    -5px 0px 40px 3px #75f60b,
+  box-shadow: 1px 1px 10px 3px #00000077, -5px 0px 40px 3px #75f60b,
     1px 1px 10px 3px #00000061;
   opacity: 0;
   transition: all 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -146,10 +145,9 @@
   gap: 8px;
 }
 
-.arrival--item>.item--img>img {
+.arrival--item > .item--img > img {
   height: clamp(250px, 40vh, 300px);
 }
-
 
 .arrival--item .info {
   display: flex;
@@ -163,7 +161,6 @@
 .arrival--item .info p {
   flex: 1 0 auto;
 }
-
 
 .sale--swiper {
   --swiper-pagination-color: #f4f6f6;
@@ -182,22 +179,22 @@
   text-align: center;
 }
 
-.free--game__item .img--wrapper>img {
+.free--game__item .img--wrapper > img {
   border-radius: 5px 5px 0 0;
 }
 
-.free--game__item .img--wrapper>span {
+.free--game__item .img--wrapper > span {
   border-radius: 0 0 5px 5px;
   font-weight: 500;
   padding: 3px 0;
   text-transform: uppercase;
 }
 
-.game--info>h5 {
+.game--info > h5 {
   font-size: clamp(10px, 3vw, 15px);
 }
 
-.game--info>p {
+.game--info > p {
   font-size: clamp(8px, 2.5vw, 13px);
 }
 
@@ -206,12 +203,25 @@
   padding: 5px 0;
 }
 
-
-
-@media(hover:hover) {
-
+@media (hover: hover) {
   .info a:hover {
     text-decoration-color: #fff;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .sale--container .sale--slide {
+    width: 100%;
+  }
+  .sale--container .sale--slide .item--img {
+    height: 300px;
+    width: 100%;
+    border-radius: 5px;
+  }
+  .sale--container .sale--slide .item--img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
@@ -221,7 +231,7 @@
     margin: 0 auto;
   }
 
-  .item--img>img {
+  .item--img > img {
     height: 350px;
   }
 
@@ -229,7 +239,6 @@
     flex-direction: row;
     padding: 5px 0;
   }
-
 }
 
 @media screen and (min-width: 1000px) {
@@ -240,7 +249,7 @@
 
   .arrival--item .item--img:hover {
     filter: brightness(160%) contrast(80%);
-    transition: filter .3s linear;
+    transition: filter 0.3s linear;
   }
 
   .item--img:hover .pin--btn {

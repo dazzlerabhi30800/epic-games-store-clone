@@ -8,9 +8,13 @@ import HeroCarousel from "./Components/HeroCarousel";
 import Sale from "./Components/Sale";
 import SwiperTest from "./Components/SwiperTest";
 import useResize from "./useResize";
+import data from "./Components/SalesData";
+import salesData from "./Components/SalesData2";
 
 function App() {
   const windowSize = useResize();
+  const saleData = data;
+  const saleData2 = salesData;
 
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -29,9 +33,11 @@ function App() {
       <main className="font-poppins">
         {windowSize.size >= 1100 ? <HeroCarousel /> : <SwiperTest />}
         <Sale
+          data={saleData}
           numberWithCommas={numberWithCommas}
           handleDiscount={handleDiscount}
           windowSize={windowSize}
+          uppercase={true}
         />
         <FreeGames />
         <ComingSoonGames />
@@ -39,6 +45,13 @@ function App() {
           numberWithCommas={numberWithCommas}
           handleDiscount={handleDiscount}
           windowSize={windowSize}
+        />
+        <Sale
+          data={saleData2}
+          numberWithCommas={numberWithCommas}
+          handleDiscount={handleDiscount}
+          windowSize={windowSize}
+          uppercase={false}
         />
       </main>
     </div>

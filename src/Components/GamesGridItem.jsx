@@ -28,7 +28,7 @@ const GamesGridItem = ({
           return (
             <div
               key={index}
-              className="sale--slide flex flex-row  gap-2 xl:gap-6 text-left h-max"
+              className="sale--slide flex flex-row gap-2 xl:gap-6 text-left h-max"
             >
               <div className="item--img flex">
                 <img src={game.image} alt={game.name} />
