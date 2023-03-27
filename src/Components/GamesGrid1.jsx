@@ -36,15 +36,7 @@ const GamesGrid1 = ({ windowSize, handleDiscount, numberWithCommas }) => {
               : 1.5
             : 3
         }
-        slidesPerGroup={
-          windowSize.size < 1200
-            ? windowSize.size < 700
-              ? windowSize.size < 500
-                ? 1.1
-                : 1.3
-              : 1.5
-            : 3
-        }
+        slidesPerGroup={windowSize.size < 1200 ? 1 : 3}
       >
         <SwiperSlide>
           <GamesGridItem
