@@ -39,6 +39,16 @@ const GamesGridItem = ({
                     ? game.name.substring(0, 20) + "..."
                     : game.name}
                 </h2>
+                {game.alert && (
+                  <span className="bg-zinc-700 uppercase text-xs w-fit py-1 px-2 rounded-md">
+                    Now on Epic
+                  </span>
+                )}
+                {game.available && (
+                  <span className="text-xs text-gray-400">
+                    {game.available}
+                  </span>
+                )}
                 <div className="price--container  flex justify-start gap-3  items-center">
                   {game.discount && (
                     <span className="discount bg-blue-500  rounded-md">

@@ -3,6 +3,7 @@ import "./App.css";
 import ComingSoonGames from "./Components/ComingSoonGames";
 import FreeGames from "./Components/FreeGames";
 import GamesGrid1 from "./Components/GamesGrid1";
+import GamesGrid2 from "./Components/GamesGrid2";
 import Header from "./Components/Header";
 import HeroCarousel from "./Components/HeroCarousel";
 import Sale from "./Components/Sale";
@@ -52,6 +53,12 @@ function App() {
           handleDiscount={handleDiscount}
           windowSize={windowSize}
           uppercase={false}
+        />
+
+        <GamesGrid2
+          numberWithCommas={numberWithCommas}
+          handleDiscount={handleDiscount}
+          windowSize={windowSize}
         />
       </main>
     </div>
