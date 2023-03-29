@@ -13,6 +13,7 @@ import data from "./Components/SalesData";
 import salesData from "./Components/SalesData2";
 
 function App() {
+  console.log("hello");
   const windowSize = useResize();
   const saleData = data;
   const saleData2 = salesData;
