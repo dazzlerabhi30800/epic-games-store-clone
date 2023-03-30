@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import "./Styles/style.css";
-import useResize from "../useResize";
+import "../Styles/style.css";
+import useResize from "../../useResize";
 
 const HeroCarousel = () => {
   let size = useResize();

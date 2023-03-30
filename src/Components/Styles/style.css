@@ -1,5 +1,6 @@
 @import './slider.css';
 @import './GamesGrid.css';
+@import './Footer.css';
 
 :root {
   --height: 670px;
