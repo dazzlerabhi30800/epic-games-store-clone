@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "../Styles/style.css";
 import useResize from "../../useResize";
 
@@ -6,7 +6,50 @@ const HeroCarousel = () => {
   let size = useResize();
   let index = 0;
   let newIndex = 0;
+  let previousIndex = 0;
   let width = 0;
+  let Interval = null;
+
+  const handleCarousel = (i) => {
+    clearInterval(Interval);
+    index = i;
+    const carouselImg = document.querySelectorAll(".img");
+    const carouselItem = document.querySelectorAll(".item");
+    carouselItem.forEach((item) => {
+      item.classList.remove("active");
+      item.style.setProperty("--item-width", 0 + "%");
+    });
+    width = 0;
+    Interval = setInterval(() => {
+      width += 1;
+      carouselItem[index].style.setProperty("--item-width", width + "%");
+      carouselItem[index].classList.add("active");
+      if (width === 100) {
+        width = 0;
+        clearInterval(Interval);
+        newIndex = index + 1 >= carouselImg.length ? 0 : index + 1;
+        previousIndex = index - 1 <= 0 ? 0 : index - 1;
+        const prevImg = document.querySelector(
+          `[data-index="${previousIndex}"]`
+        );
+        const currentImg = document.querySelector(`[data-index="${index}"]`);
+        const nextImg = document.querySelector(`[data-index="${newIndex}"]`);
+
+        prevImg.dataset.status = "unknown";
+        currentImg.dataset.status = "before";
+        nextImg.dataset.status = "before-active";
+
+        setTimeout(() => {
+          carouselItem[index].style.setProperty("--item-width", 0 + "%");
+          carouselItem[index].classList.remove("active");
+          nextImg.dataset.status = "active";
+          index = newIndex;
+          width = 0;
+          handleCarousel(index);
+        }, 50);
+      }
+    }, 45);
+  };
 
   // useEffect(() => {
   //   // width = 0;
@@ -66,42 +109,42 @@ const HeroCarousel = () => {
           </div>
         </div>
         <div className="item--list">
-          <div className="item">
+          <div className="item" onClick={() => handleCarousel(0)}>
             <img
               src="/imgs/carousel-images/item-images/gtav-item.jpg"
               alt="gta-v"
             />
             <span>gta V</span>
           </div>
-          <div className="item">
+          <div className="item" onClick={() => handleCarousel(1)}>
             <img
               src="/imgs/carousel-images/item-images/unbound-item.jpg"
               alt="gta-v"
             />
             <span>nfs unbound</span>
           </div>
-          <div className="item">
+          <div className="item" onClick={() => handleCarousel(2)}>
             <img
               src="/imgs/carousel-images/item-images/fortnite-item.jpg"
               alt="fortnite"
             />
             <span>fornite</span>
           </div>
-          <div className="item">
+          <div className="item" onClick={() => handleCarousel(3)}>
             <img
               src="/imgs/carousel-images/item-images/sifu-item.jpg"
               alt="sifu"
             />
             <span>sifu</span>
           </div>
-          <div className="item">
+          <div className="item" onClick={() => handleCarousel(4)}>
             <img
               src="/imgs/carousel-images/item-images/diablo-item.jpg"
               alt="diablo-3"
             />
             <span>Diablo III</span>
           </div>
-          <div className="item">
+          <div className="item" onClick={() => handleCarousel(5)}>
             <img
               src="/imgs/carousel-images/item-images/cod-3-item.jpg"
               alt=""

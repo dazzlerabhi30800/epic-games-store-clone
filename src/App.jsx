@@ -5,8 +5,6 @@ import Footer from "./Components/HomeComps/Footer";
 import MainHome from "./Components/HomeComps/MainHome";
 
 function App() {
-  console.log("hello");
-
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
