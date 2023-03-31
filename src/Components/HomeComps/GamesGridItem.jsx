@@ -12,9 +12,10 @@ const GamesGridItem = ({
       className="games--grid--item justify-center w-full flex flex-col gap-3"
       id={id}
     >
-      <div className="games--header flex justify-between text-sm md:text-lg px-6 items-center">
+      <div className="games--header flex justify-between  px-6 items-center">
         <h4 className="flex gap-1 font-medium items-center">{heading}</h4>
         <a
+          onClick={(e) => e.preventDefault()}
           href="#"
           className="border-solid border-2 rounded border-gray-200 py-1 px-4 ease-in-out bg-transparent duration-300 hover:bg-gray-600"
         >

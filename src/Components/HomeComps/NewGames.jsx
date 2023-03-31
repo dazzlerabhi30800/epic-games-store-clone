@@ -36,7 +36,11 @@ const NewGames = ({ windowSize }) => {
                 Explore a vibrant New Map, new Battle Pass, and in-game Gems
                 sale.
               </p>
-              <a href="#" className="w-fit underline decoration-slate-300">
+              <a
+                onClick={(e) => e.preventDefault()}
+                href="#"
+                className="w-fit underline decoration-slate-300"
+              >
                 Play For Free
               </a>
             </div>
@@ -59,7 +63,11 @@ const NewGames = ({ windowSize }) => {
               <p className="text-sm special--para text-gray-400">
                 DLC giveaway and exclusive events to sink your teeth into
               </p>
-              <a href="#" className="w-fit underline decoration-slate-300">
+              <a
+                onClick={(e) => e.preventDefault()}
+                href="#"
+                className="w-fit underline decoration-slate-300"
+              >
                 Save Now
               </a>
             </div>

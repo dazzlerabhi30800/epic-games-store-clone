@@ -33,11 +33,15 @@
   align-items: center;
 }
 
-.games--grid--container .sale--slide .item--img>img {
+.games--grid--container .sale--slide .item--img > img {
   height: 100%;
   width: 80%;
   object-fit: cover;
   border-radius: 5px;
+}
+.games--header {
+  white-space: nowrap;
+  font-size: clamp(9px, 4vw, 14px);
 }
 
 .games--grid--container .sale--slide .game--info {

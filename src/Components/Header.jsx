@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import * as Unicons from "@iconscout/react-unicons";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "./Logo";
 import useResize from "../useResize";
 
 const Header = () => {
+  const location = useLocation();
   let windowSize = useResize();
   const [showMenu, setShowMenu] = useState(false);
   return (
@@ -33,29 +35,47 @@ const Header = () => {
               : "flex flex-row items-center  tracking-wider whitespace-nowrap font-poppins gap-0 justify-between"
           }
         >
-          <li className="relative after:absolute cursor-pointer p-4 h-full  after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-sky-500">
-            <a
+          <li
+            className={`relative after:absolute cursor-pointer after:w-full p-4 h-full  after:bottom-0 after:left-0 ${
+              location.pathname === "/"
+                ? "after:opacity-100"
+                : "after:opacity-0"
+            } after:h-1 after:bg-sky-500`}
+          >
+            <Link
               className="ease-in duration-200 hover:opacity-80 uppercase"
-              href="#"
+              to="/"
             >
               Store
-            </a>
+            </Link>
           </li>
-          <li className="relative after:absolute cursor-pointer after:bottom-0 p-4 after:left-0 after:w-full after:h-1 after:opacity-0 after:ease-in after:duration-200 hover:after:opacity-100 after:bg-sky-500">
-            <a
+          <li
+            className={`relative after:absolute cursor-pointer after:bottom-0 p-4 after:left-0 after:w-full after:h-1 ${
+              location.pathname === "/distribution"
+                ? "after:opacity-100"
+                : "after:opacity-0"
+            } after:ease-in after:duration-200 after:bg-sky-500`}
+          >
+            <Link
               className="ease-in duration-200 hover:opacity-80 uppercase"
-              href="#"
+              to="/distribution"
             >
               distribution
-            </a>
+            </Link>
           </li>
-          <li className="relative after:absolute p-4 h-full cursor-pointer  after:ease-in  after:duration-200 hover:after:opacity-100 after:bottom-0 after:left-0 after:w-full after:h-1 after:opacity-0 after:bg-sky-500">
-            <a
+          <li
+            className={`relative after:absolute p-4 h-full cursor-pointer  after:ease-in  after:duration-200  after:bottom-0 after:left-0 after:w-full after:h-1 ${
+              location.pathname === "/support"
+                ? "after:opacity-100"
+                : "after:opacity-0"
+            } after:bg-sky-500`}
+          >
+            <Link
               className="ease-in duration-200 hover:opacity-80 uppercase"
-              href="#"
+              to="/support"
             >
               support
-            </a>
+            </Link>
           </li>
           <div
             className={
@@ -65,12 +85,12 @@ const Header = () => {
             }
           ></div>
           <li className="relative after:absolute p-4 h-full cursor-pointer after:bottom-0  after:left-0 after:w-full after:opacity-0 after:ease-in after:duration-200 hover:after:opacity-100 after:h-1 after:bg-sky-500">
-            <a
+            <Link
               className="ease-in duration-200 hover:opacity-80 uppercase"
-              href="#"
+              to="/"
             >
               unreal engine
-            </a>
+            </Link>
           </li>
         </ul>
         <div

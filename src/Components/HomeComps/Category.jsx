@@ -14,6 +14,7 @@ const Category = () => {
           Explore a vibrant New Map, new Battle Pass, and in-game Gems sale.
         </p>
         <a
+          onClick={(e) => e.preventDefault()}
           href="#"
           className="w-fit uppercase py-3 px-4 my-4 rounded-sm text-base bg-white text-black font-medium"
         >

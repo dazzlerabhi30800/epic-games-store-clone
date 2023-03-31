@@ -11,6 +11,7 @@ const FreeGames = () => {
           <span className="font-medium">Free Games</span>
         </h4>
         <a
+          onClick={(e) => e.preventDefault()}
           href="#"
           className="border-solid border-2 rounded border-gray-200 py-1 px-4 ease-in-out bg-transparent duration-300 hover:bg-gray-600"
         >
