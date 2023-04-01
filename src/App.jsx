@@ -19,6 +19,7 @@ function App() {
       return;
     }
   };
+  console.log("hello in arco linux");
   return (
     <Router>
       <div className="App">
