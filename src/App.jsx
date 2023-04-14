@@ -3,12 +3,11 @@ import "./App.css";
 import Header from "./Components/Header";
 import Footer from "./Components/HomeComps/Footer";
 import MainHome from "./Components/HomeComps/MainHome";
-import Distribution from "./Components/Distribution";
-import Support from "./Components/Support";
+import Distribution from "./Components/DistributionComps/Distribution";
+import Support from "./Components/SupportComps/Support";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
-  console.log("new commit in Arco Linux D");
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };

@@ -1,6 +1,7 @@
 @import "./slider.css";
 @import "./GamesGrid.css";
 @import "./Footer.css";
+@import "./Distribution/distribution.css";
 
 :root {
   --height: 670px;
@@ -205,7 +206,7 @@ body {
 .item::after {
   border-radius: 15px;
   position: absolute;
-  content: "";
+  content: n "";
   top: 0;
   left: 0;
   height: 100%;

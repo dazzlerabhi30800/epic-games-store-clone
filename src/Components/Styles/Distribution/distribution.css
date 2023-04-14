@@ -1,0 +1,9 @@
+.publish--container {
+  background: rgb(13, 31, 112);
+  background: linear-gradient(
+    90deg,
+    rgba(13, 31, 112, 1) 0%,
+    rgba(43, 4, 130, 1) 53%,
+    rgba(84, 6, 145, 1) 100%
+  );
+}
