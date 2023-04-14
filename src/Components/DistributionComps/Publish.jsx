@@ -2,21 +2,21 @@ import React from "react";
 
 const Publish = () => {
   return (
-    <div className="publish--container flex justify-between">
-      <div className="publish--img flex items-center basis-1/2">
+    <div className="publish--container flex flex-col justify-between lg:flex-row">
+      <div className="publish--img flex items-center  sm:basis-full sm:justify-center lg:basis-1/2">
         <img
-          className="w-4/5"
+          className="sm:w-3/5 lg:w-4/5"
           src="./imgs/distribution-imgs/epic-games-publishing.webp"
           alt="epic-games-publishing"
         />
       </div>
-      <div className="publish--text basis-1/2 font-poppins flex p-4 flex-col text-center items-center justify-around">
+      <div className="publish--text basis-full lg:basis-1/2 font-poppins flex py-4 px-6 gap-8  flex-col text-center items-center justify-start lg:justify-around">
         <img
           src="./epic-games-full-logo.svg"
           alt="epic-games"
           className="w-44 h-44"
         />
-        <h1 className="my-0 font-bebas text-5xl">
+        <h1 className="my-0 font-bebas text-4xl lg:text-5xl">
           Now Open to all developers and publishers
         </h1>
         <a onClick={(e) => e.preventDefault()} href="#">

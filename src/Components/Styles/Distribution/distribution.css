@@ -1,3 +1,8 @@
+.distribution--wrapper {
+  min-height: 100vh;
+  height: max-content;
+}
+
 .publish--container {
   background: rgb(13, 31, 112);
   background: linear-gradient(
