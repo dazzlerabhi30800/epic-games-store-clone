@@ -12,3 +12,17 @@
     rgba(84, 6, 145, 1) 100%
   );
 }
+
+.goals--container {
+  flex-wrap: wrap;
+}
+
+.goals--card {
+  flex-basis: 100%;
+}
+
+@media Screen and (min-width: 1024px) {
+  .goals--card {
+    flex-basis: 33%;
+  }
+}
