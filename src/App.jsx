@@ -8,6 +8,7 @@ import Support from "./Components/Support";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
+  console.log("new commit in Arco Linux D");
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
