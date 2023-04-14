@@ -21,6 +21,28 @@
   flex-basis: 100%;
 }
 
+/* Services */
+.services--comp {
+  border-radius: 10px;
+  border: 1px solid #707171;
+}
+.services--comp:nth-child(1) {
+  background: linear-gradient(
+    to right,
+    #270785 10%,
+    transparent 80%,
+    transparent
+  );
+}
+.services--comp:nth-child(2) {
+  background: linear-gradient(
+    to right,
+    #071e85 10%,
+    transparent 80%,
+    transparent
+  );
+}
+
 @media Screen and (min-width: 1024px) {
   .goals--card {
     flex-basis: 33%;

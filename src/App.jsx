@@ -6,6 +6,7 @@ import MainHome from "./Components/HomeComps/MainHome";
 import Distribution from "./Components/DistributionComps/Distribution";
 import Support from "./Components/SupportComps/Support";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+console.log(this);
 
 function App() {
   const numberWithCommas = (x) => {
