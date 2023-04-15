@@ -7,7 +7,7 @@ const Services = () => {
         <div className="services--comp basis-full lg:basis-1/2 flex items-center justify-between p-4">
           <div className="flex justify-center items-center basis-2/5">
             <img
-              className="w-56 h-56 lg:w-72 lg:h-72 object-cover"
+              className="h-40 w-40 object-cover mx-auto lg:w-56 lg:h-56"
               src="./imgs/distribution-imgs/epic-games-logo.svg"
               alt="epic-games"
             />
@@ -27,14 +27,14 @@ const Services = () => {
           </div>
         </div>
         <div className="services--comp basis-full lg:basis-1/2 flex items-center justify-between p-4">
-          <div className="flex justify-center items-center basis-2/5">
+          <div className="flex basis-2/5 lg:basis-1/2">
             <img
-              className="w-56 h-56 lg:w-72 lg:h-72 object-cover"
+              className="h-40 w-40 object-cover mx-auto lg:w-56 lg:h-56"
               src="./imgs/distribution-imgs/unreal-engine-logo.svg"
               alt="epic-games"
             />
           </div>
-          <div className="flex flex-col basis-full basis-3/5 p-4 gap-6 text-center justify-between items-center">
+          <div className="flex flex-col basis-full lg:basis-3/5 p-4 gap-6 text-center justify-between items-center">
             <h3 className="text-base lg:text-xl text-gray-400">
               The world's most open and advanced real-time 3D creating tool
             </h3>

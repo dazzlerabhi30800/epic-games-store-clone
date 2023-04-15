@@ -29,8 +29,8 @@
 .services--comp:nth-child(1) {
   background: linear-gradient(
     to right,
-    #270785 10%,
-    transparent 80%,
+    #160479 10%,
+    transparent 70%,
     transparent
   );
 }
@@ -38,7 +38,7 @@
   background: linear-gradient(
     to right,
     #071e85 10%,
-    transparent 80%,
+    transparent 70%,
     transparent
   );
 }

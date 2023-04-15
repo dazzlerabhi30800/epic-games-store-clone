@@ -30,8 +30,8 @@ const Accordian = () => {
                 <button
                   onClick={() => handleAccordian(data.id)}
                   className={`flex items-center text-left text-base lg:text-xl pr-4 font-semibold justify-between ${
-                    data.ask ? "text-cyan-400" : "text-white"
-                  } ease-in-out duration-300 hover:text-cyan-400`}
+                    data.ask ? "text-sky-600" : "text-white"
+                  } ease-in-out duration-300 hover:text-sky-600`}
                 >
                   <span className="basis-3/4 lg:basis-auto">
                     {data.question}
