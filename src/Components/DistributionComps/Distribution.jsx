@@ -3,6 +3,7 @@ import Publish from "./Publish";
 import "../Styles/style.css";
 import Goals from "./Goals";
 import Services from "./Services";
+import Accordian from "./Accordian";
 
 const Distribution = () => {
   return (
@@ -10,6 +11,7 @@ const Distribution = () => {
       <Publish />
       <Goals />
       <Services />
+      <Accordian />
     </main>
   );
 };
