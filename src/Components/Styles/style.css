@@ -178,7 +178,6 @@ body {
   gap: 1rem;
   width: 90%;
   cursor: pointer;
-  /* width: max-content; */
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
   margin: 8px 0 0 2rem;
@@ -206,7 +205,7 @@ body {
 .item::after {
   border-radius: 15px;
   position: absolute;
-  content: n "";
+  content: "";
   top: 0;
   left: 0;
   height: 100%;
@@ -214,8 +213,8 @@ body {
   background: rgba(255, 255, 255, 0.4);
   transition: width 0.2s linear;
 }
-.item:hover::after {
-  width: 100%;
+.item:hover {
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .notransition {

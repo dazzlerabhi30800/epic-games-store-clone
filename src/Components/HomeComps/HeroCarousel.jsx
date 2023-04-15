@@ -1,9 +1,7 @@
 import React from "react";
 import "../Styles/style.css";
-import useResize from "../../useResize";
 
 const HeroCarousel = () => {
-  let size = useResize();
   let index = 0;
   let newIndex = 0;
   let previousIndex = 0;
