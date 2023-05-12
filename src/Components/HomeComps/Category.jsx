@@ -6,6 +6,7 @@ const Category = () => {
       <img
         src="./imgs/sale-imgs/category-2.jpg"
         className="basis-full md:basis-2/5  lg:basis-1/2 h-96 md:h-72 lg:h-110 rounded-xl ease-in duration-300 hover:brightness-150 object-cover"
+        loading="lazy"
         alt="category"
       />
       <div className="info basis-full  w-full p-2 md:basis-3/5 lg:basis-1/2 flex flex-col gap-5 text-white">

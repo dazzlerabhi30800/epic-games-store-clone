@@ -32,7 +32,7 @@ const GamesGridItem = ({
               className="sale--slide flex flex-row gap-2 xl:gap-6 text-left h-max"
             >
               <div className="item--img flex">
-                <img src={game.image} alt={game.name} />
+                <img loading="lazy" src={game.image} alt={game.name} />
               </div>
               <div className="game--info flex flex-col basis-1/2  px-2 gap-2">
                 <h2 className="name my-0  uppercase">

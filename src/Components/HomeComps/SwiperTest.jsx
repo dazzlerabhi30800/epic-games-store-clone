@@ -6,7 +6,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-// import "swiper/swiper-bundle.css";
 
 const SwiperTest = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -14,8 +13,6 @@ const SwiperTest = () => {
     const slides = document.querySelectorAll(".slide");
     slides.forEach((slide) => slide.classList.remove("active"));
     slides[activeIndex].classList.add("active");
-    // console.log(activeIndex);
-    // console.log(slides[activeIndex]);
   }
   useEffect(() => {
     handleActive();

@@ -26,7 +26,7 @@ const FreeGames = () => {
               className="free--game__item flex flex-col w-full gap-3"
             >
               <div className="img--wrapper flex flex-col">
-                <img src={item.image} alt={item.name} />
+                <img loading="lazy" src={item.image} alt={item.name} />
                 <span className={item.available ? "bg-sky-500" : "bg-black"}>
                   {item.available ? "free now" : "coming soon"}
                 </span>

@@ -7,6 +7,7 @@ const SaleItem = ({ uppercase, data, handleDiscount, numberWithCommas }) => {
       <div className="item--img">
         <img
           className="rounded-md object-cover"
+          loading="lazy"
           src={data.image}
           alt={data.name}
         />

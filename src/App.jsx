@@ -19,6 +19,7 @@ function App() {
       return;
     }
   };
+
   return (
     <Router>
       <div className="App">

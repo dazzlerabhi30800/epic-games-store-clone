@@ -11,7 +11,12 @@ const Goals = () => {
               key={index}
               className="goals--card font-poppins flex flex-col text-center items-center border border-gray-500 p-4 rounded-md gap-5 justify-between"
             >
-              <img className="w-32 h-32" src={item.image} alt={item.heading} />
+              <img
+                loading="lazy"
+                className="w-32 h-32"
+                src={item.image}
+                alt={item.heading}
+              />
               <h2 className="text-2xl lg:text-3xl">{item.heading}</h2>
               <p className="text-sm lg:text-base text-gray-300">{item.desc}</p>
             </div>

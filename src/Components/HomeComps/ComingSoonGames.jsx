@@ -18,6 +18,7 @@ const ComingSoonGames = () => {
               <div className="item--img">
                 <img
                   className="rounded-md h-60 sm:40 object-cover w-full"
+                  loading=""
                   src={item.image}
                   alt={item.name}
                 />

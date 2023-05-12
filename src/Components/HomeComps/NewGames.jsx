@@ -26,6 +26,7 @@ const NewGames = ({ windowSize }) => {
             <div className="item--img">
               <img
                 className="rounded-md"
+                loading="lazy"
                 src="./imgs/sale-imgs/smite.jpg"
                 alt="smite"
               />
@@ -54,6 +55,7 @@ const NewGames = ({ windowSize }) => {
             <div className="item--img">
               <img
                 className="rounded-md"
+                loading="lazy"
                 src="./imgs/free-games/world-of-warships.jpg"
                 alt="world-of-warships"
               />
