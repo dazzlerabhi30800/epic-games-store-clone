@@ -8,6 +8,7 @@ const Header = () => {
   const location = useLocation();
   let windowSize = useResize();
   const [showMenu, setShowMenu] = useState(false);
+
   return (
     <header
       className={`flex ${
@@ -45,6 +46,7 @@ const Header = () => {
             <Link
               className="ease-in duration-200 hover:opacity-80 uppercase"
               to="/"
+              onClick={() => setShowMenu(false)}
             >
               Store
             </Link>
@@ -59,6 +61,7 @@ const Header = () => {
             <Link
               className="ease-in duration-200 hover:opacity-80 uppercase"
               to="/distribution"
+              onClick={() => setShowMenu(false)}
             >
               distribution
             </Link>
@@ -73,6 +76,7 @@ const Header = () => {
             <Link
               className="ease-in duration-200 hover:opacity-80 uppercase"
               to="/support"
+              onClick={() => setShowMenu(false)}
             >
               support
             </Link>
@@ -88,6 +92,7 @@ const Header = () => {
             <Link
               className="ease-in duration-200 hover:opacity-80 uppercase"
               to="/"
+              onClick={() => setShowMenu(false)}
             >
               unreal engine
             </Link>
