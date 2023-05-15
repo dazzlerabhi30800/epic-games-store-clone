@@ -11,6 +11,25 @@
   box-sizing: border-box;
 }
 
+/* ScrollBar CSS */
+::-webkit-scrollbar {
+  width: 12px;
+  background: transparent;
+}
+::-webkit-scrollbar-track {
+  background-color: rgb(6, 6, 6);
+}
+::-webkit-scrollbar-track-piece {
+  background: #212122;
+}
+::-webkit-scrollbar-thumb {
+  background: #adfb81;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6de629;
+}
+
 main {
   padding-bottom: 1rem;
 }
