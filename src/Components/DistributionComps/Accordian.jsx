@@ -9,9 +9,8 @@ const Accordian = () => {
       accordianData.map((item) => {
         if (item.id === id) {
           return { ...item, ask: !item.ask };
-        } else {
-          return { ...item, ask: false };
         }
+        return { ...item, ask: false };
       })
     );
   };

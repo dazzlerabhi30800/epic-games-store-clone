@@ -5,7 +5,7 @@ const Publish = () => {
     <div className="publish--container my-6 flex flex-col justify-between lg:flex-row">
       <div className="publish--img flex items-center sm:basis-full sm:justify-center lg:basis-1/2">
         <img
-          className="sm:w-3/5 h-4/6 lg:h-5/6 lg:w-4/5"
+          className="sm:w-3/5 h-5/6 lg:h-5/6 lg:w-4/5"
           src="./imgs/distribution-imgs/epic-games-publishing.webp"
           alt="epic-games-publishing"
         />
