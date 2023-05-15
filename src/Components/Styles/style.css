@@ -304,6 +304,10 @@ body {
   :root {
     --height: 600px;
   }
+  ::-webkit-scrollbar {
+    width: 7px;
+    background: transparent;
+  }
 
   .item--list {
     gap: 1.1rem;
